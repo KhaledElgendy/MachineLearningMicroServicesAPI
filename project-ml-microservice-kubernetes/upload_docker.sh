@@ -6,10 +6,15 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
+dockerpath="mylocalapp"
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker login &&\
+    docker tag mylocalapp khaledelgendy/mylocalapp:$dockerpath
+
 
 # Step 3:
 # Push image to a docker repository
+docker push khaledelgendy/mylocalapp:$dockerpath
