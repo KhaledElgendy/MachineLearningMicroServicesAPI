@@ -34,5 +34,4 @@ jobs:
           name: run lint
           command: |
             . venv/bin/activate
-            yum install pylint
-            make lint
+            sudo make lint
